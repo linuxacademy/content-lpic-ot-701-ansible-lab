@@ -1,0 +1,9 @@
+---
+- name: Install Apache Web Server
+  hosts: client
+  become: true
+  tasks:
+  - name: Install the package
+    apt:
+      name: apache2
+      state: present
