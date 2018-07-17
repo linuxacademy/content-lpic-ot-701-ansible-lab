@@ -1,9 +1,9 @@
 ---
-- name: Install Apache Web Server
+- name: Install Text Based Web Browser
   hosts: client
   become: true
   tasks:
   - name: Install the package
-    apt:
-      name: apache2
+    yum:
+      name: elinks
       state: present
